@@ -44,9 +44,7 @@ The code is written in PyTorch and Python 3.
 4.Install openai gym, which is required by ML-Agents.
 
 * `git clone https://github.com/openai/gym.git`
-
 * `cd gym`
-
 * `pip install -e .`
 
 5.Install udacity git repo with unityAgent enviroment.

@@ -34,7 +34,7 @@ The environment is considered solved, when the average (over 100 episodes) of th
 The code is written in PyTorch and Python 3.
 
 1.Clone this repo by
-*git clone https://github.com/JieChen2000/rl-continous-control.git
+* git clone https://github.com/JieChen2000/rl-continous-control.git
 
 2.Current code is tested with the Unity Machine Learning Agents (ML-Agents) environment on windows 64-bit operating system, download the enviroment
     - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
@@ -43,21 +43,23 @@ The code is written in PyTorch and Python 3.
 
 4.Install openai gym, which is required by ML-Agents.
 
-*`git clone https://github.com/openai/gym.git`
-*`cd gym`
-*`pip install -e .`
+* `git clone https://github.com/openai/gym.git`
+
+* `cd gym`
+
+* `pip install -e .`
 
 5.Install udacity git repo with unityAgent enviroment.
 
-*`git clone https://github.com/udacity/deep-reinforcement-learning.git`
-*`cd deep-reinforcement-learning/python`
-*`conda install pytorch=0.4.0 -c pytorch`  
-*`pip install .`  
+* `git clone https://github.com/udacity/deep-reinforcement-learning.git`
+* `cd deep-reinforcement-learning/python`
+* `conda install pytorch=0.4.0 -c pytorch`  
+* `pip install .`  
 
 ## Running Instructions
 
-*`python train_agent.py`
-*`python run_agent.py`  //this will call the trained model and run the smart agent to interact with enviroment.
+* `python train_agent.py`
+* `python run_agent.py`  //this will call the trained model and run the smart agent to interact with enviroment.
 
 ## Demo and Algorithm Description
 

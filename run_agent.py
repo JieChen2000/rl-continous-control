@@ -29,7 +29,7 @@ print('The state for the first agent looks like:', states[0])
 
 
 
-agent = Agent(state_size=state_size, action_size=action_size,random_seed=0)
+agent = Agent(num_agents=num_agents, state_size=state_size, action_size=action_size,random_seed=0)
 # load the weights from file
 agent.actor_local.load_state_dict(torch.load('checkpoint_actor.pth'))
 agent.critic_local.load_state_dict(torch.load('checkpoint_critic.pth'))

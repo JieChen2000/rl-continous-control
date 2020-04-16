@@ -1,12 +1,10 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif "Trained Agent"
-[image2]: https://user-images.githubusercontent.com/10624937/43851646-d899bf20-9b00-11e8-858c-29b5c2c94ccc.png "Crawler"
 
+# Continuous Control RL Example
 
-# Continuous Control RL example
-
-### Introduction
+## Introduction
 
 For this project, we work with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
 
@@ -24,39 +22,43 @@ It is useful for algorithms like [PPO](https://arxiv.org/pdf/1707.06347.pdf), [A
 ### Solving the Environment
 
 The agents must get an average score of +30 (over 100 consecutive episodes, and over all agents).  Specifically,
-- After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent.  This yields 20 (potentially different) scores.  We then take the average of these 20 scores. 
+
+- After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent.  This yields 20 (potentially different) scores.  We then take the average of these 20 scores.
+
 - This yields an **average score** for each episode (where the average is over all 20 agents).
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30.
 
-
-### Enviroment Setup
+## Enviroment Setup
 
 The code is written in PyTorch and Python 3.
 
-1. Clone this repo by
-* git clone https://github.com/JieChen2000/dqn-navigation.git
+1.Clone this repo by
+*git clone https://github.com/JieChen2000/rl-continous-control.git
 
-2. Current code is tested with the Unity Machine Learning Agents (ML-Agents) environment on windows 64-bit operating system, download the enviroment
+2.Current code is tested with the Unity Machine Learning Agents (ML-Agents) environment on windows 64-bit operating system, download the enviroment
     - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
-3. Place the file in the this GitHub repository, and unzip (or decompress) the file.
+3.Place the file in the this GitHub repository, and unzip (or decompress) the file.
 
-4. Install openai gym, which is required by ML-Agents.
-* `git clone https://github.com/openai/gym.git`
-* `cd gym`
-* `pip install -e . `
+4.Install openai gym, which is required by ML-Agents.
 
-5. Install udacity git repo with unityAgent enviroment.
-* `git clone https://github.com/udacity/deep-reinforcement-learning.git`
-* `cd deep-reinforcement-learning/python`
-* `conda install pytorch=0.4.0 -c pytorch`  
-* `pip install . `  
+*`git clone https://github.com/openai/gym.git`
+*`cd gym`
+*`pip install -e .`
 
-### Running Instructions
-* `python train_agent.py`  
-* `python run_agent.py`  //this will call the trained model and run the smart agent to interact with enviroment.
+5.Install udacity git repo with unityAgent enviroment.
 
-### Demo and Algorithm Description
+*`git clone https://github.com/udacity/deep-reinforcement-learning.git`
+*`cd deep-reinforcement-learning/python`
+*`conda install pytorch=0.4.0 -c pytorch`  
+*`pip install .`  
 
-The report `report.ipynb` describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures for any neural networks. A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward of at least +30 over 100 episodes.
+## Running Instructions
+
+*`python train_agent.py`
+*`python run_agent.py`  //this will call the trained model and run the smart agent to interact with enviroment.
+
+## Demo and Algorithm Description
+
+The report `report.ipynb` describes the learning algorithm, along with the chosen hyperparameters. It also describes the model architectures. A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward of at least +30 over 100 episodes.

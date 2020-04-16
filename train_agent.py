@@ -29,7 +29,7 @@ state_size = states.shape[1]
 print('There are {} agents. Each observes a state with length: {}'.format(states.shape[0], state_size))
 print('The state for the first agent looks like:', states[0])
 
-agent = Agent(state_size=state_size, action_size=action_size, seed=0)
+agent = Agent(num_agents=num_agents, state_size=state_size, action_size=action_size, random_seed=0)
 def ddpg(n_episodes=1000, max_t=1000, print_every=10):
     scores_deque = deque(maxlen=100)
     scores_mean = []
@@ -57,7 +57,7 @@ def ddpg(n_episodes=1000, max_t=1000, print_every=10):
         if i_episode % print_every == 0:
             print('\rEpisode {}\tAverag Score: {:.2f}'.format(i_episode, np.mean(scores_deque)), end="")
         if np.mean(scores_deque) > 30 and len(scores_deque) >= 100:
-            print('\nEn)ironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode-100, np.mean(scores_deque)))
+            print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_deque)))
             torch.save(agent.actor_local.state_dict(), 'checkpoint_actor.pth')
             torch.save(agent.critic_local.state_dict(), 'checkpoint_critic.pth')
             break
